@@ -1,0 +1,28 @@
+:root {
+    --text: #ebf6e4;
+    --background: #0c1505;
+    --primary: #b5ed91;
+    --secondary: #449e10;
+    --accent: #76f726;
+    --shadow: #FFD34D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text);
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+
+body {
+    background: var(--background);
+    height: 100vh;
+}
+
+/*Clase declarada para la velocidad de las transiciones*/
+.transition {
+    transition: all 0.5s ease;
+
+}

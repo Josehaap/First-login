@@ -1,0 +1,96 @@
+section.hero {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+section.hero>article:nth-child(1) {
+    border-radius: 50px;
+    grid-column: 8/11;
+    grid-row: 7/11;
+    background: url(./src/meca.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    border-radius: 25px;
+    grid-column: 5/8;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #142408;
+    position: relative;
+}
+
+nav:hover {
+    box-shadow: 0 0 20px green;
+}
+
+
+
+.nameProyect {
+    position: absolute;
+    top: -2vh;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(112, 112, 112);
+}
+
+section.hero>article:nth-child(3) {
+    border-radius: 50px;
+    grid-column: 2/4;
+    grid-row: 1/5;
+    background: url(./src/tren.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+section.hero>article:nth-child(4) {
+    border-radius: 50px;
+    grid-column: 5/8;
+    grid-row: 2/10;
+    background: url(./src/bus.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+section.hero>article:nth-child(5) {
+    border-radius: 50px;
+    grid-column: 8/11;
+    grid-row: 1/7;
+    background: url(./src/windows+coffee.png);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+section.hero>article:nth-child(6) {
+    border-radius: 50px;
+    grid-column: 1/5;
+    grid-row: 5/11;
+    background: url(./src/house.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+span {
+    cursor: pointer;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
