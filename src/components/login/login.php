@@ -1,12 +1,12 @@
 <?php
     include '../../../cookie-lib/biblioteca.php';
     include '../../../data/user.php';
-    $_SESSION["UserAdmin"] = "";
+    $_SESSION["checkLogin"] = "";
     $_SESSION["usuarioAdmin"] = new User("Jose de Haro Jiménez", 1234);
 
     if (isset($_GET["nombre"])){
         if($_GET["nombre"] == $_SESSION["usuarioAdmin"]->obtenerNombre() && $_GET["password"] == $_SESSION["usuarioAdmin"]->obtenerPassword()) {
-            $_SESSION["UserAdmin"] = "Admin";
+            $_SESSION["checkLogin"] = "Admin";
             header('Location: ../../../index.php');
         }
     }

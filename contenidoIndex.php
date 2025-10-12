@@ -1,10 +1,10 @@
 <?php
  include './cookie-lib/biblioteca.php';
  
-    if($_SESSION["UserAdmin"] == "" || $_SESSION["UserAdmin"] != "Admin") header('Location: ./src/components/login/login.php');
+    if($_SESSION["checkLogin"] == "" || $_SESSION["checkLogin"] != "Admin") header('Location: ./src/components/login/login.php');
     /*
     function eliminarCredenciales(){
-        $_SESSION["UserAdmin"]="";
+        $_SESSION["checkLogin"]="";
     }
     <!--¿Preguntar a javi por qué cuando reiniciio la página el método se ejecuta con este codigo?-->
     <!--<form action="<?php eliminarCredenciales(); ?>" method="post">
@@ -13,7 +13,7 @@
     */
 
     if(isset($_GET["cerrar_sesion"])){
-         $_SESSION["UserAdmin"]="";
+         $_SESSION["checkLogin"]="";
          header('Location: ./contenidoIndex.php');
     }
 ?>
