@@ -31,7 +31,7 @@
     <form action="login.php" method="get" class="transition">
         <img class="transition" src="./user.webp" alt="" id="img">
 
-        <h1>Inicio de sesión</h1>
+        <h1>Pinterest 2.0 </h1>
     
         <div class="contenedorInput ">
             <label for="nombre">Nombre:</label>

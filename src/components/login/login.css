@@ -1,5 +1,7 @@
 @import url('../../../global.css');
 
+
+
 form {
     width: 40vw;
     height: 60vh;
@@ -70,7 +72,7 @@ form>div:first-of-type {
 
 form>div:last-of-type {
     width: 30vw;
-    grid-column:     1/1;
+    grid-column: 1/1;
     grid-row: 3/4;
     align-items: left;
 
