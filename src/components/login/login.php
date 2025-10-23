@@ -1,18 +1,30 @@
 <?php
-    include '../../../cookie-lib/biblioteca.php';
-    include '../../../data/user.php';
+include '../../../cookie-lib/biblioteca.php';
+include '../../../data/user.php';
+
+// Inicializamos las variables de sesión
+if (!isset($_SESSION["checkLogin"])) {
     $_SESSION["checkLogin"] = "";
-    $_SESSION["usuarioAdmin"] = new User("Jose de Haro Jiménez", 1234);
+}
 
-    if (isset($_GET["nombre"])){
-        if($_GET["nombre"] == $_SESSION["usuarioAdmin"]->obtenerNombre() && $_GET["password"] == $_SESSION["usuarioAdmin"]->obtenerPassword()) {
-            $_SESSION["checkLogin"] = "Admin";
-            header('Location: ../../../index.php');
-        }
+if (!isset($_SESSION["usuarioAdmin"])) {
+    $_SESSION["usuarioAdmin"] = new User("Jose de Haro Jiménez", "1234");
+}
+
+// Si se envió el formulario:
+if (isset($_GET["nombre"], $_GET["password"])) {
+    $nombre = $_GET["nombre"];
+    $password = $_GET["password"];
+
+    // Validar credenciales
+    if ($nombre === $_SESSION["usuarioAdmin"]->obtenerNombre() &&
+        $password === $_SESSION["usuarioAdmin"]->obtenerPassword()) {
+
+        $_SESSION["checkLogin"] = "Admin";
+        header('Location: ../../../index.php');
+        exit; // 🔥 detiene ejecución
     }
-    
-
-
+}
 ?>
 
 <!DOCTYPE html>
