@@ -1,21 +1,16 @@
 <?php
  include './cookie-lib/biblioteca.php';
  
-    if($_SESSION["checkLogin"] == "" || $_SESSION["checkLogin"] != "Admin") header('Location: ./src/components/login/login.php');
-    /*
-    function eliminarCredenciales(){
-        $_SESSION["checkLogin"]="";
-    }
-    <!--¿Preguntar a javi por qué cuando reiniciio la página el método se ejecuta con este codigo?-->
-    <!--<form action="<?php eliminarCredenciales(); ?>" method="post">
-        <button>Cerrar sesión</button>
-    </form>-->    
-    */
+    if (!isset($_SESSION["checkLogin"]) || $_SESSION["checkLogin"] !== "Admin") {
+    header('Location: ./src/components/login/login.php');
+    exit;
+}
 
-    if(isset($_GET["cerrar_sesion"])){
-         $_SESSION["checkLogin"]="";
-         header('Location: ./contenidoIndex.php');
-    }
+if (isset($_GET["cerrar_sesion"])) {
+    $_SESSION["checkLogin"] = "";
+    header('Location: ./contenidoIndex.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
