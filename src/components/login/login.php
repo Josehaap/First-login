@@ -3,13 +3,13 @@ include '../../../cookie-lib/biblioteca.php';
 include '../../../data/user.php';
 
 // Inicializamos las variables de sesión
-if (!isset($_SESSION["checkLogin"])) {
-    $_SESSION["checkLogin"] = "";
-}
 
-if (!isset($_SESSION["usuarioAdmin"])) {
+    $_SESSION["checkLogin"] = "";
+
+
+
     $_SESSION["usuarioAdmin"] = new User("Jose de Haro Jiménez", "1234");
-}
+
 
 // Si se envió el formulario:
 if (isset($_GET["nombre"], $_GET["password"])) {
